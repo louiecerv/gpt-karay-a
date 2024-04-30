@@ -13,7 +13,7 @@ client = AsyncOpenAI(
 context = "You are a language assistant"
 
 async def generate_response(question, context):
-    model = "ft:gpt-3.5-turbo-1106:west-visayas-state-university::9JDQf0yI"
+    model = "ft:gpt-3.5-turbo-1106:west-visayas-state-university:karay-a:9JehclEn"
     
     completion = await client.chat.completions.create(model=model, 
         messages=[{"role": "user", "content": question}, 
@@ -32,7 +32,7 @@ async def app():
         """
         st.write(text)
 
-        text = """This is a simple translator that translates English to Hiligaynon and vice versa.
+        text = """This is a simple translator that translates English to Karay-a and vice versa.
         The app is based on a research project to develop a mobile tranlation app for various Visayan languages."""
         st.write(text)
         df = pd.read_csv("karay-a.csv", header=0)
@@ -41,16 +41,16 @@ async def app():
         st.write(df)
 
     # Define the options for the show selection
-    show_options = ["English to Hiligaynon", "Hiligaynon to English"]
+    show_options = ["English to Karay-a", "Karay-a to English"]
 
     # Use st.selectbox to create the show option box
     selected_show = st.selectbox("Select the translation task", show_options)
 
     # Process the selected option
     if selected_show:  # Check if user selected something
-        if selected_show == "English to Hiligaynon":
-            task = "translate to hiligaynon:"
-        elif selected_show == "Hiligaynon to English":
+        if selected_show == "English to Karay-a":
+            task = "translate to Karay-a:"
+        elif selected_show == "Karay-a to English":
             task = "translate to enlish:"
 
     # Text input for user question
