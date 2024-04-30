@@ -49,7 +49,7 @@ async def app():
     # Process the selected option
     if selected_show:  # Check if user selected something
         if selected_show == "English to Karay-a":
-            task = "translate to Karay-a:"
+            task = "translate to karay-a:"
         elif selected_show == "Karay-a to English":
             task = "translate to English:"
 
