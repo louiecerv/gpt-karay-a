@@ -51,7 +51,7 @@ async def app():
         if selected_show == "English to Karay-a":
             task = "translate to Karay-a:"
         elif selected_show == "Karay-a to English":
-            task = "translate to enlish:"
+            task = "translate to English:"
 
     # Text input for user question
     question = st.text_area("Enter the sentence to translate:")
