@@ -13,7 +13,8 @@ client = AsyncOpenAI(
 context = "You are a language assistant"
 
 async def generate_response(question, context):
-    model = "ft:gpt-3.5-turbo-1106:west-visayas-state-university:karay-a-v2:9JmquryN"
+    #model = "ft:gpt-3.5-turbo-1106:west-visayas-state-university:karay-a-v2:9JmquryN"
+    model = "ft:gpt-3.5-turbo-1106:west-visayas-state-university:karay-a:9JehclEn"
     
     completion = await client.chat.completions.create(model=model, 
         messages=[{"role": "user", "content": question}, 
