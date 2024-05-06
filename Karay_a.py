@@ -4,10 +4,12 @@ import pandas as pd
 
 from openai import AsyncOpenAI
 from openai import OpenAI
+import os
 
 client = AsyncOpenAI(
     # This is the default and can be omitted
-    api_key=st.secrets["API_key"],
+    #api_key=st.secrets["API_key"],
+    api_key=os.getenv("API_key"),
 )
 
 context = "You are a language assistant"
